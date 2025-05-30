@@ -1,0 +1,419 @@
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+}
+
+body {
+  background-color: #ffe6a7;
+  color: #432818;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #ffe6a7;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 15px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #432818;
+}
+input,textarea{
+  outline: none;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #99582a;
+  padding: 15px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  color: #432818;
+}
+.search-icon {
+  cursor: pointer;
+  color: #432818;
+}
+.search input {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #99582a;
+  outline: none;
+  font-size: 14px;
+  background-color: #ffe6a7;
+  color: #432818;
+  width: 0;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffe6a7;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active-link {
+  color: #ffe6a7;
+  border-bottom: 2px solid #bb9457;
+}
+
+.book-card {
+  position: relative;
+  width: 220px;
+  background-color: #bc8a5f;
+  border-radius: 8px;
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 8px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.book-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  z-index: 10;
+  overflow-y: auto;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.book-description.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.book-description p {
+  margin-bottom: 10px;
+}
+
+.book-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #432818;
+}
+
+.book-details {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #432818;
+}
+
+.book-author,
+.book-genre {
+  font-size: 14px;
+  color: #432818;
+  margin: 3px 0;
+}
+
+.book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5px 0;
+}
+
+.book-actions button {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #99582a;
+  color: #ffe6a7;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1 1 40%;
+}
+.book-actions button a {
+  text-decoration: none;
+  color: inherit;
+}
+.book-actions button:hover {
+  background-color: #432818;
+  color: #ffe6a7;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 15px 7px;
+  background-color: #99582a;
+  color: #ffe6a7;
+  border: 1px solid #432818;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #432818;
+  color: #ffe6a7;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #bc8a5f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.book-form input {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #99582a;
+  border-radius: 10px;
+  background-color: #fff9ee;
+  color: #432818;
+}
+
+.book-form input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.about-page {
+  padding: 40px 20px;
+  background-color: #ffebba;
+  color: #432818;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  border: 1px solid #432818;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(67, 40, 24, 0.5);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.about-page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #99582a;
+  border-bottom: 2px solid #bb9457;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-page p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #432818;
+  margin: 15px 0;
+}
+
+.about-page ul li {
+  list-style-type: none;
+}
+.about-page a {
+  color: #99582a;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px dotted #bb9457;
+}
+
+.about-page a:hover {
+  color: #432818;
+  border-bottom: 1px solid #432818;
+}
+
+.footer {
+  background-color: #432818;
+  color: #ffe6a7;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer .social-links {
+  margin-top: 10px;
+}
+
+.footer .social-links a {
+  color: #ffe6a7;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer .social-links a i {
+  font-size: 20px;
+}
+
+.footer .social-links a:hover {
+  color: #bb9457;
+}
+
+.contact {
+  background-color: #a76435;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border: 1px solid #432818;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.contact h2 {
+  color: #ffe6a7;
+  margin-bottom: 20px;
+}
+
+.contact label {
+  color: #432818;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #432818;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fffaf3;
+  color: #432818;
+}
+
+.contact button {
+  background-color: #432818;
+  color: #ffe6a7;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #99582a;
+  color: #fff;
+}
+/* Kategori dropdown menüsü */
+.category-dropdown {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Select box (dropdown) */
+.category-dropdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.category-dropdown select {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+/* Select box içindeki seçenekler */
+.category-dropdown option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.category-dropdown option:hover {
+  background-color: #f0f0f0;
+}
+.logout-button {
+  background-color: #ff4f5a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-button:hover {
+  background-color: #e44e50;
+}
